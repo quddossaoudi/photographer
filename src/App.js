@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, CSSProperties } from "react";
+import BarLoader from "react-spinners/BarLoader";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p
+        style={{
+          position: "fixed",
+          top: "45%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: "9999",
+        }}
+      >
+        Hadiya Ali
+      </p>
+      <BarLoader
+        color="#36d7b7"
+        cssOverride={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: "9999",
+        }}
+        speedMultiplier={1}
+        width={150}
+      />
     </div>
   );
 }
