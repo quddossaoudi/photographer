@@ -17,6 +17,7 @@ function App() {
       setBarWidth(window.innerWidth);
     }, 7400);
   }, []);
+
   return (
     <div>
       {loading ? (
@@ -44,6 +45,7 @@ function App() {
             speedMultiplier={1}
             width={barWidth}
             loading={loading}
+            height={1}
           />
         </>
       ) : (
