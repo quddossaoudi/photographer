@@ -1,14 +1,11 @@
 import "./App.css";
 import React, { useEffect, useState, useCallback } from "react";
 import BarLoader from "react-spinners/BarLoader";
+import TypewriterComponent from "typewriter-effect";
 
 function App() {
   const [loading, setLoading] = useState(false);
   const [barWidth, setBarWidth] = useState(150);
-
-  const [newName, setnewName] = useState("");
-
-  const names = ["Hadiya Ali", "هدية علي", "하디야 알리", "ہادیہ علی"];
 
   useEffect(() => {
     setLoading(true);
@@ -36,7 +33,25 @@ function App() {
               zIndex: "9999",
             }}
           >
-            Hadiya Ali
+            <TypewriterComponent
+              onInit={(typewriter) => {
+                typewriter
+                  .changeDelay(75)
+                  .changeDeleteSpeed(75)
+                  .typeString("Hadiya Ali")
+                  .changeDelay(75)
+                  .changeDeleteSpeed(75)
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .typeString("하디야 알리")
+                  .changeDelay(75)
+                  .changeDeleteSpeed(75)
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .typeString("هدية علي")
+                  .start();
+              }}
+            />
           </p>
           <BarLoader
             color="#000"
