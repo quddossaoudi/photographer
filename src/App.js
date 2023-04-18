@@ -1,10 +1,15 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import BarLoader from "react-spinners/BarLoader";
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [barWidth, setBarWidth] = useState(300);
+  const [barWidth, setBarWidth] = useState(150);
+
+  const [newName, setnewName] = useState("");
+
+  const names = ["Hadiya Al", "هدية علي", "하디야 알리", "ہادیہ علی"];
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -42,7 +47,7 @@ function App() {
               transform: "translate(-50%, -50%)",
               transition: "width 0.5s ease-out",
             }}
-            speedMultiplier={1}
+            speedMultiplier={1.2}
             width={barWidth}
             loading={loading}
             height={1}
