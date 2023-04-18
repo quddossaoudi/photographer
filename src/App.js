@@ -8,7 +8,7 @@ function App() {
 
   const [newName, setnewName] = useState("");
 
-  const names = ["Hadiya Al", "هدية علي", "하디야 알리", "ہادیہ علی"];
+  const names = ["Hadiya Ali", "هدية علي", "하디야 알리", "ہادیہ علی"];
 
   useEffect(() => {
     setLoading(true);
