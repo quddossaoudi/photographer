@@ -1,7 +1,8 @@
-import "./App.css";
 import React, { useEffect, useState, useCallback } from "react";
+import css from "./App.module.css";
 import BarLoader from "react-spinners/BarLoader";
 import TypewriterComponent from "typewriter-effect";
+import Home from "./components/containers/Home";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -24,15 +25,7 @@ function App() {
     <div>
       {loading ? (
         <>
-          <p
-            style={{
-              position: "fixed",
-              top: "45%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: "9999",
-            }}
-          >
+          <p className={css.introName}>
             <TypewriterComponent
               onInit={(typewriter) => {
                 typewriter
@@ -69,7 +62,7 @@ function App() {
           />
         </>
       ) : (
-        <p>hello</p>
+        <Home />
       )}
     </div>
   );

@@ -1,0 +1,9 @@
+.introName{
+    position: fixed;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    font-size: 18px;
+    font-family: 'Syncopate', sans-serif;
+}
