@@ -4,7 +4,7 @@ import css from "./Footer.module.css"
 
 function Footer() {
   return (
-    <section className={css.footer}>
+    <section className={css.footer} data-scroll-section>
       <SectionHeader title='Made in'/>
 <h1 className={css.location} id='location-text'>Rio Di Janiro</h1>
     </section>

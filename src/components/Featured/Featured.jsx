@@ -4,7 +4,7 @@ import photos from '../utils/data'
 function Featured() {
   const [firstUrl, secondUrl] = photos
   return (
-    <section className= {css.featuredSection}>
+    <section className= {css.featuredSection} data-scroll-section>
     <div className={css.featuredRowLayout}>
     <h6>green</h6>
     <img src ={firstUrl}/>
