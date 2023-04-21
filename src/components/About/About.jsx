@@ -41,7 +41,8 @@ function About() {
     <SectionHeader title="about" />
     <p ref={ref} id="headline" className={cn({ "is-reveal": reveal })}>
       Flirty Flowers is a blog about flowers and the floral designers who make
-      
+      Flirty Flowers is a blog about flowers and the floral designers who make
+      Flirty Flowers is a blog about flowers and the floral designers who make
     </p>
   </section>
   )

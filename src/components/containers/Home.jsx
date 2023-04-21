@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import css from './Home.module.css'
 import CustomCursor from '../CustomCursor/CustomCursor'
 import NavBar from '../NavBar/NavBar'
@@ -11,11 +11,12 @@ import useLocoScroll from '../hooks/useLocoScroll'
 
 const Home = () => {
   useLocoScroll()
+  const ref = useRef(null);
   return (
     <>
         <CustomCursor/>
 
-        <div className={css.mainContainer} id="main-container" data-scroll-container>
+        <div className={css.mainContainer} id="main-container" data-scroll-container ref={ref}>
             <NavBar/>
             <Header/>
             <Featured/>

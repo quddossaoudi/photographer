@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 import useOnScreen from "../hooks/useOnScreen";
 import cn from "classnames";
 
@@ -52,13 +52,12 @@ function GalleryItem({
     if (onScreen) {
       updateActiveImage(index);
     }
-  }, [onScreen, index]);
+  }, [onScreen, index, updateActiveImage]);
 
   return (
     <div
       className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
       ref={ref}
-      data-scroll-section
     >
       <div></div>
       <div className={"gallery-item"}>
@@ -83,12 +82,10 @@ export default function Gallery({ src, index, columnOffset }) {
   const ref = useRef(null);
 
   useEffect(() => {
-    if (ref.current) {
-      console.log(ref.current.offsetWidth);
-      console.log(ref.current.clientWidth);
-      console.log({ current: ref.current });
+    // This does not seem to work without a settimeout
+    setTimeout(() => {
       let sections = gsap.utils.toArray(".gallery-item-wrapper");
-  
+
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
@@ -99,13 +96,12 @@ export default function Gallery({ src, index, columnOffset }) {
           pin: true,
           scrub: 0.5,
           snap: 1 / (sections.length - 1),
-          end: () => `+=${ref.current ? ref.current.offsetWidth : 0}`,
+          end: () => `+=${ref.current.offsetWidth}`,
         },
       });
       ScrollTrigger.refresh();
-    }
+    });
   }, []);
-  
 
   const handleUpdateActiveImage = (index) => {
     setActiveImage(index + 1);

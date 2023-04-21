@@ -9,11 +9,10 @@ body{
 }
 .mainContainer{
     padding: 0 5vw;
-
 }
 section{
     padding: 100px 0;
 }
-.sectionHeader{
+section .sectionHeader{
     margin-bottom: 50px;
 }
