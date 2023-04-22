@@ -16,7 +16,7 @@ const Home = () => {
     <>
         <CustomCursor/>
 
-        <div className={css.mainContainer} id="main-container" data-scroll-container ref={ref}>
+        <div className={css.mainContainer} id="main-containe" data-scroll-container ref={ref}>
             <NavBar/>
             <Header/>
             <Featured/>
