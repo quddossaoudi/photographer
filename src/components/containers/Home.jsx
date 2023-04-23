@@ -14,17 +14,18 @@ const Home = () => {
   const ref = useRef(null);
   return (
     <>
-        <CustomCursor/>
+  
+          <CustomCursor/>
 
         <div className={css.mainContainer} id="main-container" data-scroll-container ref={ref}>
             <NavBar/>
+
             <Header/>
             <Featured/>
             <About/>
             <Gallery/>
             <Footer/>
         </div>
-    
     
     
     
