@@ -2,8 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import css from "./App.module.css";
 import BarLoader from "react-spinners/BarLoader";
 import TypewriterComponent from "typewriter-effect";
-import Home from "./components/containers/Home";
-
+import Home from "../src/containers/Home";
 function App() {
   // const [loading, setLoading] = useState(false);
   // const [barWidth, setBarWidth] = useState(150);
